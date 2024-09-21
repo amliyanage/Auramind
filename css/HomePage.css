@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, serif;
+}
+
+#HomePage{
+    width: 100%;
+    height: 100vh;
+    background: #66B2B2;
+}
+
+#HomePage > div{
+    width: 85%;
+    height: 85%;
+    border-radius: 30px;
+    background: #F5F3F2;
+    box-shadow: 0 4px 59px 15px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#HomePage > div >:first-child{
+    border-right: 3px solid #B2D9D8;;
+}
+
+#HomePage .progressBtn{
+    border-radius: 23px;
+    background: #CBE0DF;
+    color: #008081;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#HomePage .timer >:first-child{
+    width: 40vh;
+    height: 40vh;
+    border: 30px solid #B2D9D8;
+}
+
+#HomePage .timer h1{
+    color: #6C6C6C;
+    font-size: 31px;
+    font-weight: 600;
+}
+
+#HomePage .timer h2{
+    color: #000;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+#HomePage .timer h3{
+    color: #6C6C6C;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#HomePage .timer .buttons{
+    gap: 100px;
+}
+
+#HomePage .timer .buttons button{
+    border-radius: 21px;
+    background: rgba(102, 178, 178, 0.30);
+    padding: 16px 30px;
+    border: none;
+}
