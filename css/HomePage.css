@@ -67,3 +67,28 @@
     padding: 16px 30px;
     border: none;
 }
+
+#HomePage .taskSection .taskList{
+    height: 68vh;
+}
+
+#HomePage .taskSection input{
+    border-radius: 25px;
+    background: #B2D9D8;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border: none;
+    letter-spacing: 1px;
+}
+
+#HomePage .taskSection input:focus{
+    outline: none;
+}
+
+#HomePage .taskSection button{
+    border-radius: 25px;
+    background: #B2D9D8;
+    width: 70px;
+    border: none;
+}
