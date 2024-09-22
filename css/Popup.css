@@ -1,0 +1,18 @@
+#chart {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.50); /* This is the dimmed background */
+    width: 100%;
+    height: 100%;
+}
+
+#chart > div{
+    background: #F5F3F2;
+    width: 40%;
+    height: auto;
+    border-right: 30px;
+}
+
+canvas{
+    width: 100% !important;
+    height: auto !important;
+}
