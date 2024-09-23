@@ -50,6 +50,10 @@ $(document).ready(function() {
     let interval;
 
     $('#startBtn').click(function() {
+        if ($('#taskName').text() === 'Click a task to focus on') {
+            alert('Please select a task to focus on');
+            return;
+        }
         if (!interval) {
             interval = setInterval(updateStopwatch, 1000); // Updates every second
         }
