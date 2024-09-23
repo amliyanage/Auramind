@@ -43,6 +43,9 @@ $('#HomePage .taskSection .taskList').on('click', '.taskCard button', function (
 });
 
 $(document).ready(function() {
+
+    updateTaskArray();
+
     let hours = 0, minutes = 0, seconds = 0;
     let interval;
 
@@ -94,3 +97,17 @@ $(document).ready(function() {
     }
 
 })
+
+function updateTaskArray() {
+    const taskDate = JSON.parse(localStorage.getItem('taskDate')) || "";
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const currentDate = `${day}/${month}/${year}`;
+
+    if (taskDate !== currentDate) {
+        localStorage.setItem('taskDate', JSON.stringify(currentDate));
+        localStorage.setItem('tasks', JSON.stringify([]));
+    }
+}
