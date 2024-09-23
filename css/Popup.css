@@ -3,6 +3,7 @@
     background: rgba(0, 0, 0, 0.50); /* This is the dimmed background */
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 #chart > div{
@@ -10,9 +11,19 @@
     width: 40%;
     height: auto;
     border-right: 30px;
+    animation: __zoomIn 1s;
 }
 
 canvas{
     width: 100% !important;
     height: auto !important;
+}
+
+@keyframes  __zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }

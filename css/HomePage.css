@@ -15,7 +15,7 @@
     width: 85%;
     height: 85%;
     border-radius: 30px;
-    background: #F5F3F2;
+    background: #ffffff;
     box-shadow: 0 4px 59px 15px rgba(0, 0, 0, 0.25);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -69,7 +69,12 @@
 }
 
 #HomePage .taskSection .taskList{
-    height: 68vh;
+    height: 64vh;
+    overflow-y: scroll;
+}
+
+#HomePage .taskSection .taskList::-webkit-scrollbar{
+    width: 0;
 }
 
 #HomePage .taskSection input{
@@ -91,4 +96,15 @@
     background: #B2D9D8;
     width: 70px;
     border: none;
+}
+
+#HomePage .taskSection .taskCard{
+    background: #ffffff;
+    border: 2px solid #66B1B1;
+    padding: 10px 20px ;
+    border-radius: 20px;
+}
+
+#HomePage .taskSection .taskCard svg{
+    fill: #ff8989;
 }
