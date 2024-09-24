@@ -1,25 +1,23 @@
 $(document).ready(function () {
-    //console.log("Document is ready, initializing event listeners...");
-
     // Initialize the chart variable
     let myPieChart;
 
     $('#HomePage .progressBtn').click(function () {
-        //console.log("Progress button clicked");
         $('#chart').css("display", "flex");
-        //console.log("Chart container displayed");
 
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        //console.log("Retrieved tasks from localStorage: ", tasks);
 
         const taskLabels = tasks.map(task => task.taskName);
         const taskDurations = tasks.map(task => {
-            const time = task.time.split(":");
-            return parseInt(time[0]) * 3600 + parseInt(time[1]) * 60 + parseInt(time[2]);
+            if (task.time && typeof task.time === 'string' && task.time.includes(':')) {
+                const time = task.time.split(":");
+                return parseInt(time[0]) * 3600 + parseInt(time[1]) * 60 + parseInt(time[2]);
+            } else {
+                // If the time is invalid or undefined, default to 0 seconds
+                console.warn(`Invalid time format for task "${task.taskName}", setting duration to 0 seconds.`);
+                return 0;
+            }
         });
-
-        //console.log("Task labels: ", taskLabels);
-        //console.log("Task durations (in seconds): ", taskDurations);
 
         const chartData = {
             labels: taskLabels,
@@ -56,20 +54,15 @@ $(document).ready(function () {
 
         // Destroy the previous chart instance if it exists
         if (myPieChart) {
-            //console.log("Destroying previous chart instance...");
             myPieChart.destroy();
         }
 
         // Create and display the new chart
         const ctx = document.getElementById('myPieChart').getContext('2d');
-        //console.log("Creating chart in canvas with ID 'myPieChart'");
-
         myPieChart = new Chart(ctx, {
             type: 'bar',
             data: chartData,
             options: chartOptions
         });
-
-        //console.log("Chart created successfully");
     });
 });
