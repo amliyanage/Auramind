@@ -3,7 +3,7 @@
 ## Description
 This project is a web application that allows users to manage tasks and track the time spent on each task. It includes a timer, task list, and a chart to visualize task durations.
 
-![Task Tracker Screenshot](assets/screenshot/Screenshot 2024-10-21 160420.png)
+![Task Tracker Screenshot](assets/screenshot/Screenshot%202024-10-21%20160420.png)
 ![Task Tracker Screenshot](assets/screenshot/Screenshot%202024-10-21%20160940.png)
 
 ## Features
